@@ -58,10 +58,13 @@ body {
   flex: 5;
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .container {
-    width: 100vw;
+    width: 90vw;
   }
+  /* .panel:nth-last-of-type(4),
+  .panel:nth-last-of-type(5) */
+
   .panel:nth-of-type(4),
   .panel:nth-of-type(5) {
     display: none;
