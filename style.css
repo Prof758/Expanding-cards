@@ -2,7 +2,6 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 body {
@@ -13,32 +12,33 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  margin: 0;
 }
 
 .title h1 {
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 100px;
 }
 
 .container {
   display: flex;
-
   width: 90vw;
+  /* margin: 0 20px; */
 }
 
 .panel {
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 80vh;
-  border-radius: 28px;
+  border-radius: 50px;
   color: #fff;
   margin: 10px;
   cursor: pointer;
   flex: 0.5;
   position: relative;
-  transition: flex 0.7s ease-in;
+  transition: all 700ms ease-in;
 }
 
 .panel h3 {
@@ -52,21 +52,20 @@ body {
 
 .panel.active h3 {
   opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 
 .panel.active {
   flex: 5;
 }
 
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .container {
-    width: 90vw;
+    width: 100vw;
   }
-  /* .panel:nth-last-of-type(4),
-  .panel:nth-last-of-type(5) */
 
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
+  .panel:nth-of-type(5),
+  .panel:nth-of-type(6) {
     display: none;
   }
 }
